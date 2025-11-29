@@ -34,7 +34,7 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Over 25 years of expertise in marine inspection services,
+                Over 27 years of expertise in marine inspection services,
                 including draft surveys, OGC inspections, on/off hire
                 inspections, and ship condition assessments.
               </p>
@@ -60,9 +60,9 @@ export default function Hero() {
           </main>
         </div>
       </div>
-      <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 overflow-hidden">
+      <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 overflow-hidden rounded-full">
         <img
-          className="h-full w-full object-cover rounded-l-3xl"
+          className="h-1/2 w-1/2 object-cover"
           src="https://storage.googleapis.com/a1aa/image/fBU1Mfrpz1qYh0XyMeoycx1f1sWb3DPeReHMNu665YiEJc17E.jpg"
           alt="Container ship at port"
           style={{ transform: `translateY(${offsetY * 0.4}px)` }}

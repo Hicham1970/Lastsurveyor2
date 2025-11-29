@@ -36,11 +36,11 @@ export default function Navbar() {
             <div className="ml-10 flex items-baseline space-x-4">
               <Link to="/" className="nav-link">Home</Link>
               <Link to="/services" className="nav-link">Services</Link>
+              <Link to="/about" className="nav-link">About</Link>
               <Link to="/contact" className="nav-link">Contact</Link>
-              <Link to="/identification" className="nav-link">Client ID</Link>
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="p-2 m-1 rounded-md text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               >
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
@@ -63,8 +63,8 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" className="mobile-nav-link" onClick={handleMobileLinkClick}>Home</Link>
             <Link to="/services" className="mobile-nav-link" onClick={handleMobileLinkClick}>Services</Link>
+            <Link to="/about" className="mobile-nav-link" onClick={handleMobileLinkClick}>About</Link>
             <Link to="/contact" className="mobile-nav-link" onClick={handleMobileLinkClick}>Contact</Link>
-            <Link to="/identification" className="mobile-nav-link" onClick={handleMobileLinkClick}>Client ID</Link>
             <div className="pt-2">
               <button
                 onClick={toggleTheme}
