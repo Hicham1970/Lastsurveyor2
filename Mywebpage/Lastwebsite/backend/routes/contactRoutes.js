@@ -9,7 +9,7 @@ router.post(
   [
     body('name').notEmpty().trim().escape(),
     body('email').isEmail().normalizeEmail(),
-    body('subject').notEmpty().trim().escape(),
+    body('phone').optional().trim().escape(),
     body('message').notEmpty().trim().escape()
   ],
   createContact

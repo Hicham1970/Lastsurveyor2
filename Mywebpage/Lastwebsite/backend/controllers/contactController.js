@@ -1,5 +1,6 @@
 import Contact from '../models/Contact.js';
 import { validationResult } from 'express-validator';
+import { sendEmail } from '../send-email.js';
 
 export const createContact = async (req, res) => {
   try {
@@ -10,6 +11,14 @@ export const createContact = async (req, res) => {
 
     const contact = new Contact(req.body);
     await contact.save();
+
+    // Send email to Gmail
+    try {
+      await sendEmail(req.body);
+    } catch (emailError) {
+      console.error('Email sending failed:', emailError);
+      // Continue with success response even if email fails
+    }
 
     res.status(201).json({
       success: true,
