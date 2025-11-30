@@ -2,7 +2,7 @@
 // Il doit être placé dans un environnement serveur (ex: /api/send-email.ts sur Vercel/Next.js)
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { Resend } from 'resend';
+import Resend from 'resend';
 
 // La fonction qui gère la requête
 export default async function handler(req: VercelRequest, res: VercelResponse) {
