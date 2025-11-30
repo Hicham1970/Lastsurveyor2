@@ -1,17 +1,17 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
-
 export const sendContactMessage = async (formData: {
   name: string;
   email: string;
-  subject: string;
   message: string;
 }) => {
   try {
-    const response = await axios.post(`${API_URL}/contact`, formData);
+    // On utilise une URL relative pour appeler la fonction serverless de Vercel.
+    // L'endpoint `/api/send-email` correspond au fichier `src/api/send-email.ts`.
+    const response = await axios.post('/api/send-email', formData);
     return response.data;
   } catch (error) {
+    // Propager l'erreur permet au composant qui appelle de la gérer.
     throw error;
   }
 };

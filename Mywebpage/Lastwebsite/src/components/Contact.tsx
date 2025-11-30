@@ -12,7 +12,7 @@ export default function Contact() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("/api/send-email", {
+      const response = await fetch("/api/send-email", { // <-- C'est le bon endpoint pour Vercel
         method: "POST",
         headers: {
           "Content-Type": "application/json",
