@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "resend": "^6.5.2"
-  },
-  "devDependencies": {
-    "@vercel/node": "^5.5.13"
-  }
-}

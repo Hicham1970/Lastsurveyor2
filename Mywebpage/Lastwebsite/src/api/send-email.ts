@@ -30,7 +30,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             from: 'Contact Form <onboarding@resend.dev>', // IMPORTANT: Doit être un domaine vérifié ou onboarding@resend.dev
             to: [toEmail],
             subject: `Nouveau message de ${name}`,
-            reply_to: email, // Correction: la propriété est bien reply_to
+            reply_to: email, // La propriété correcte est reply_to
             html: `
         <h1>New message from your website MarineInspect Pro</h1>
         <p><strong>Name:</strong> ${name}</p>
